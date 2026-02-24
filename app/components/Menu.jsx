@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import MenubarBtn from "./MenubarBtn";
 
-const Menu = ({aboutUs = "/aboutUs" , home = "/"}) => {
+const Menu = ({ aboutUs = "/aboutUs", home = "/" }) => {
   const tiltleLefNav = [
     { id: 1, title: "گالری" },
     { id: 2, title: "وبلاگ" },
@@ -12,7 +12,7 @@ const Menu = ({aboutUs = "/aboutUs" , home = "/"}) => {
     <div>
       {/* mobile menu */}
       <div className="flex items-center justify-between px-[8%] md:px-[10%] mt-5 lg:hidden">
-        <MenubarBtn />
+        <MenubarBtn home={home} aboutUs={aboutUs} />
         <div className="relative w-[80px] h-[80px] px-1">
           <Image fill src="/images/logo.png" alt="logo" objectFit="contain" />
         </div>
@@ -28,7 +28,10 @@ const Menu = ({aboutUs = "/aboutUs" , home = "/"}) => {
               </Link>
             </li>
             <li className="w-fit h-fit cursor-pointer text-sm xl:text-[16px] px-3 xl:px-10 py-8 group hoverText">
-              <Link href={aboutUs} className="group-hover:opacity-60 duration-500">
+              <Link
+                href={aboutUs}
+                className="group-hover:opacity-60 duration-500"
+              >
                 درباره ما
               </Link>
             </li>

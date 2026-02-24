@@ -1,8 +1,9 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useRef, useState } from "react";
 
-export default function MenubarBtn() {
+export default function MenubarBtn({aboutUs = "/aboutUs" , home = "/"}) {
   const lines = [1, 2, 3];
 
   const [isOpen, setIsOpen] = useState(false);
@@ -54,14 +55,14 @@ export default function MenubarBtn() {
               <nav>
                 <ul className="flex flex-col items-start  pb-5 pt-20">
                   <li className="w-fit h-fit cursor-pointer  pb-[15px] group">
-                    <a href="#" className="group-hover:opacity-60 duration-500">
+                    <Link href={home} className="group-hover:opacity-60 duration-500">
                       صفحه اصلی
-                    </a>
+                    </Link>
                   </li>
                   <li className="w-fit h-fit cursor-pointer  pb-[15px] group">
-                    <a href="#" className="group-hover:opacity-60 duration-500">
+                    <Link href={aboutUs} className="group-hover:opacity-60 duration-500">
                       درباره ما
-                    </a>
+                    </Link>
                   </li>
                   <li className="w-fit h-fit cursor-pointer  pb-[15px] group">
                     <a href="#" className="duration-500">
