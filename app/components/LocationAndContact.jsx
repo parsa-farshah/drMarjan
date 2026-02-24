@@ -25,8 +25,8 @@ const LocationAndContact = () => {
   ];
 
   return (
-    <div className="pt-10">
-      <div className="w-full h-fit bg-[#f5f1ea] flex flex-col md:flex-row flex-nowrap items-center border-b border-b-[#71815e]">
+    <div className="pt-10 2xl:container 2xl:mx-auto">
+      <div className="w-full h-fit bg-[#f5f1ea] flex flex-col md:flex-row flex-nowrap items-center ">
         {/* emergency call */}
         <div className="w-full h-fit text-[#71815e] px-[25px] pt-10 pb-5">
           <h2 className="text-xl md:text-[30px] lg:text-[40px] pb-5">

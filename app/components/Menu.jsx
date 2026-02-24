@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import MenubarBtn from "./MenubarBtn";
 
-const Menu = () => {
+const Menu = ({aboutUs = "/aboutUs" , home = "/"}) => {
   const tiltleLefNav = [
     { id: 1, title: "گالری" },
     { id: 2, title: "وبلاگ" },
@@ -23,12 +23,12 @@ const Menu = () => {
         <nav className="w-[40%] ">
           <ul className="flex items-center justify-between">
             <li className="w-fit h-fit cursor-pointer text-sm xl:text-[16px] px-3 xl:px-10 py-8 group hoverText">
-              <Link href="" className="group-hover:opacity-60 duration-500">
+              <Link href={home} className="group-hover:opacity-60 duration-500">
                 صفحه اصلی
               </Link>
             </li>
             <li className="w-fit h-fit cursor-pointer text-sm xl:text-[16px] px-3 xl:px-10 py-8 group hoverText">
-              <Link href="/" className="group-hover:opacity-60 duration-500">
+              <Link href={aboutUs} className="group-hover:opacity-60 duration-500">
                 درباره ما
               </Link>
             </li>

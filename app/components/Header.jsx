@@ -1,14 +1,14 @@
-import React from 'react'
-import TopBar from './TopBar'
-import Menu from './Menu'
+import React from "react";
+import TopBar from "./TopBar";
+import Menu from "./Menu";
 
-function Header() {
+function Header({ home, aboutUs }) {
   return (
     <header>
-      <TopBar /> 
-      <Menu/>
+      <TopBar />
+      <Menu home={home} aboutUs={aboutUs} />
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

@@ -7,7 +7,7 @@ import FooterLegal from "./FooterLegal";
 
 const Footer = () => {
   return (
-    <div className="w-full h-fit bg-[#f5f1ea] py-4">
+    <div className="w-full h-fit bg-[#f5f1ea] py-4 border-t border-t-[#71815e]">
       <div className="w-40 h-40 relative mx-auto">
         <Image fill src="/images/logo.png" alt="logo" />
       </div>
