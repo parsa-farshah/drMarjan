@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-favColor: #71815e;
+}
+
+@layer utilities {
+  @keyframes lineMove {
+    0%,
+    100% {
+      width: 100%;
+    }
+    50% {
+      width: 50%;
+    }
+  }
+
+  .animate-line {
+    animation: lineMove 2s infinite;
+  }
+
+  .bgBrand {
+    background-color: #71815e;
+  }
+
+  .textBrand {
+    color: #71815e;
+  }
+
+  .hoverText {
+    @apply hover:text-[#d0c8b2];
+  }
+}
