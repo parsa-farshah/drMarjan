@@ -1,6 +1,7 @@
 import React from "react";
 import LineText from "./LineText";
 import Image from "next/image";
+import Link from "next/link";
 
 const OurTreatments = () => {
   const treatments = [
@@ -9,24 +10,28 @@ const OurTreatments = () => {
       image:
         "https://raw.githubusercontent.com/parsa-farshah/drMarjanAssets/refs/heads/main/images/services-1.png",
       text: "صورت",
+      pageRoutHref: "/face",
     },
     {
       id: 2,
       image:
         "https://raw.githubusercontent.com/parsa-farshah/drMarjanAssets/refs/heads/main/images/services-2.png",
       text: "پوست",
+      pageRoutHref: "/skin",
     },
     {
       id: 3,
       image:
         "https://raw.githubusercontent.com/parsa-farshah/drMarjanAssets/refs/heads/main/images/services-3.png",
       text: "بدن",
+      pageRoutHref: "/body",
     },
     {
       id: 4,
       image:
         "https://raw.githubusercontent.com/parsa-farshah/drMarjanAssets/refs/heads/main/images/services-4.png",
       text: "مو",
+      pageRoutHref: "/hair",
     },
   ];
 
@@ -36,7 +41,7 @@ const OurTreatments = () => {
       <div className="flex flex-col sm:flex-row flex-wrap pt-10 px-[15px]">
         {treatments.map((val, i) => {
           return (
-            <div
+            <Link href={val.pageRoutHref}
               key={val.id}
               className={`w-[95%] sm:w-[45%] lg:w-[23%] h-fit pt-5 px-[15px] mb-5 
     ${i % 2 === 1 ? " bg-[#a1a686] hover:bg-[#f5f1ea]" : "hover:bg-[#a1a686] bg-[#f5f1ea]"} 
@@ -56,7 +61,7 @@ const OurTreatments = () => {
               >
                 {val.text}
               </h3>
-            </div>
+            </Link>
           );
         })}
       </div>

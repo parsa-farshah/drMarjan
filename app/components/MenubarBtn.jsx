@@ -2,8 +2,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useRef, useState } from "react";
+import { FiChevronDown } from "react-icons/fi";
 
-export default function MenubarBtn({aboutUs = "/aboutUs" , home = "/"}) {
+export default function MenubarBtn({
+  aboutUs = "/aboutUs",
+  home = "/",
+  face = "/face",
+  skin = "/skin",
+  body = "/body",
+  hair = "/hair"
+}) {
   const lines = [1, 2, 3];
 
   const [isOpen, setIsOpen] = useState(false);
@@ -17,6 +25,8 @@ export default function MenubarBtn({aboutUs = "/aboutUs" , home = "/"}) {
   const closeMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  const [openServices, setOpenServices] = useState(false);
 
   return (
     <div>
@@ -55,27 +65,82 @@ export default function MenubarBtn({aboutUs = "/aboutUs" , home = "/"}) {
               <nav>
                 <ul className="flex flex-col items-start  pb-5 pt-20">
                   <li className="w-fit h-fit cursor-pointer  pb-[15px] group">
-                    <Link href={home} className="group-hover:opacity-60 duration-500">
+                    <Link
+                      href={home}
+                      className="group-hover:text-[#d0c8b2] duration-300"
+                    >
                       صفحه اصلی
                     </Link>
                   </li>
-                  <li className="w-fit h-fit cursor-pointer  pb-[15px] group">
-                    <Link href={aboutUs} className="group-hover:opacity-60 duration-500">
+                  <li className="w-fit h-fit cursor-pointer pb-[15px] group">
+                    <Link
+                      href={aboutUs}
+                      className="group-hover:text-[#d0c8b2] duration-300"
+                    >
                       درباره ما
                     </Link>
                   </li>
-                  <li className="w-fit h-fit cursor-pointer  pb-[15px] group">
-                    <a href="#" className="duration-500">
+                  {/* services */}
+
+                  <li className="pb-[15px] w-full">
+                    <button
+                      onClick={() => setOpenServices(!openServices)}
+                      className="duration-1000 cursor-pointer hover:opacity-60 flex items-center gap-2"
+                    >
                       خدمات ما
-                    </a>
+                      <FiChevronDown
+                        className={`transition-transform duration-300 ${
+                          openServices ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+
+                    {/* زیر منو */}
+                    {openServices && (
+                      <ul className="mt-3 mr-4 flex flex-col gap-2 text-sm duration-700">
+                        <li>
+                          <Link
+                            href={face}
+                            className="hover:text-[#d0c8b2] duration-300"
+                          >
+                            صورت
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href={body}
+                            className="hover:text-[#d0c8b2] duration-300"
+                          >
+                            بدن
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href={skin}
+                            className="hover:text-[#d0c8b2] duration-300"
+                          >
+                            پوست
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href={hair}
+                            className="hover:text-[#d0c8b2] duration-300"
+                          >
+                            مو
+                          </Link>
+                        </li>
+                      </ul>
+                    )}
                   </li>
+
                   <li className="w-fit h-fit cursor-pointer  pb-[15px] group">
-                    <a href="#" className="duration-500">
+                    <a href="#" className=" hover:text-[#d0c8b2] duration-300">
                       گالری
                     </a>
                   </li>
                   <li className="w-fit h-fit cursor-pointer  pb-[15px] group">
-                    <a href="#" className="duration-500">
+                    <a href="#" className=" hover:text-[#d0c8b2] duration-300">
                       وبلاگ
                     </a>
                   </li>

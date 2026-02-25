@@ -3,16 +3,32 @@ import Link from "next/link";
 import React from "react";
 import MenubarBtn from "./MenubarBtn";
 
-const Menu = ({ aboutUs = "/aboutUs", home = "/" }) => {
+const Menu = ({
+  aboutUs = "/aboutUs",
+  home = "/",
+  face = "/face",
+  skin = "/skin",
+  body = "/body",
+  hair = "/hair",
+  gallery = "/gallery",
+  weblog = "/weblog",
+}) => {
   const tiltleLefNav = [
-    { id: 1, title: "گالری" },
-    { id: 2, title: "وبلاگ" },
+    { id: 1, title: "گالری", pageRoute: gallery },
+    { id: 2, title: "وبلاگ", pageRoute: weblog },
   ];
   return (
     <div>
       {/* mobile menu */}
       <div className="flex items-center justify-between px-[8%] md:px-[10%] mt-5 lg:hidden">
-        <MenubarBtn home={home} aboutUs={aboutUs} />
+        <MenubarBtn
+          home={home}
+          aboutUs={aboutUs}
+          face={face}
+          skin={skin}
+          body={body}
+          hair={hair}
+        />
         <div className="relative w-[80px] h-[80px] px-1">
           <Image fill src="/images/logo.png" alt="logo" objectFit="contain" />
         </div>
@@ -44,7 +60,7 @@ const Menu = ({ aboutUs = "/aboutUs", home = "/" }) => {
                 {/* colum 1 */}
                 <ul className="w-full">
                   <li className="pr-5 pb-5">
-                    <Link href="/">اند و لیفت</Link>
+                    <Link href={face}>صورت</Link>
                   </li>
                   <li className="py-1 w-[80%] border border-[#fff0] hover:border-white">
                     <Link href="/">صورت</Link>
@@ -57,7 +73,7 @@ const Menu = ({ aboutUs = "/aboutUs", home = "/" }) => {
                 {/* colum 2 */}
                 <ul className="w-full">
                   <li className="pr-5 pb-5">
-                    <Link href="/">مزوتراپی</Link>
+                    <Link href={skin}>پوست</Link>
                   </li>
                   <li className="py-1 w-[80%] border border-[#fff0] hover:border-white">
                     <Link href="/">صورت</Link>
@@ -73,7 +89,7 @@ const Menu = ({ aboutUs = "/aboutUs", home = "/" }) => {
                 {/* colum 3 */}
                 <ul className="w-full">
                   <li className="pr-5 pb-5">
-                    <Link href="/">تزریق فیلرهای جوانساز</Link>
+                    <Link href={body}>بدن</Link>
                   </li>
                   <li className="py-1 w-[80%] border border-[#fff0] hover:border-white">
                     <Link href="/">صورت</Link>
@@ -86,7 +102,7 @@ const Menu = ({ aboutUs = "/aboutUs", home = "/" }) => {
                 {/* colum 4 */}
                 <ul className="w-full">
                   <li className="pr-5 pb-5">
-                    <Link href="#">کانتورینگ</Link>
+                    <Link href={hair}>مو</Link>
                   </li>
                   <li className="py-1 w-[80%] border border-[#fff0] hover:border-white">
                     <Link href="#">صورت</Link>
@@ -113,7 +129,7 @@ const Menu = ({ aboutUs = "/aboutUs", home = "/" }) => {
                   className="w-fit h-fit cursor-pointer text-sm xl:text-[16px] px-3 xl:px-10 py-4 group hoverText"
                 >
                   <Link
-                    href="#"
+                    href={item.pageRoute}
                     className="group-hover:opacity-60 duration-500"
                   >
                     {item.title}

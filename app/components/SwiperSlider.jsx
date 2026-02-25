@@ -56,7 +56,7 @@ const SwiperSlider = () => {
             <div className="relative w-full h-full">
               <Image
                 fill
-                src="/images/slider1.jpg"
+                src="/images/slider2.jpg"
                 alt="مرکز تخصصی پوست و زیبایی دکتر مرجان خلیلی - خدمات اندولیفت بدن"
                 className="w-full h-full object-cover"
                 loading="eager"
@@ -103,7 +103,7 @@ const SwiperSlider = () => {
             <div className="relative w-full h-full">
               <Image
                 fill
-                src="/images/slider2.jpg"
+                src="/images/slider1.jpg"
                 alt="خدمات زیبایی پیشرفته - مرکز دکتر مرجان خلیلی"
                 className="w-full h-full object-cover"
               />

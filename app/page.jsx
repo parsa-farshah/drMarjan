@@ -11,7 +11,13 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <div>
-      <Header />
+      <Header
+        home={"/"}
+        aboutUs={"/aboutUs"}
+        face={"/face"}
+        body={"/body"}
+        hair={"/hair"}
+      />
       <Slider />
       <OurTreatments />
       <WhoWeAre />

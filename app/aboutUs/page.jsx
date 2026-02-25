@@ -8,12 +8,18 @@ import LocationAndContact from "../components/LocationAndContact";
 const page = () => {
   return (
     <div>
-      <Header home={"./"} aboutUs={"/"} />
+      <Header
+        home={"./"}
+        aboutUs={"/"}
+        face={"./face"}
+        body={"./body"}
+        skin={"./skin"}
+        hair={"./hair"}
+      />
       {/* main */}
       <MainAboutUs />
       <WhyChooseUs />
       <div className="relative mt-10 w-full">
-
         <div className="absolute top-[-5%] left-0 w-full z-20">
           <img
             src="/images/aboutFooterBg.webp"
