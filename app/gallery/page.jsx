@@ -15,7 +15,6 @@ function page() {
         skin={"./skin"}
         hair={"./hair"}
       />
-     
       <Footer />
     </div>
   );

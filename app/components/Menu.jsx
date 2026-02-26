@@ -52,64 +52,95 @@ const Menu = ({
               </Link>
             </li>
             <li className="w-fit h-fit cursor-pointer text-sm xl:text-[16px] px-3 xl:px-10 py-8 group hoverText">
-              <Link href="/" className="duration-500">
-                خدمات ما
-              </Link>
+              <div className="duration-500">خدمات ما</div>
               {/* submenu */}
-              <div className="w-[90%] h-[350px] z-50 absolute left-1/2 justify-around -translate-x-1/2 hidden group-hover:flex top-18 text-white px-5 pt-[20px] pb-2.5 bg-[#AAB39F] duration-1000">
+              <div className="w-[90%] h-[414px] z-50 absolute left-1/2 justify-around -translate-x-1/2 hidden group-hover:flex top-18 text-white px-10 pt-[34px] pb-2.5 bg-[#AAB39F] duration-500 rounded-sm">
                 {/* colum 1 */}
                 <ul className="w-full">
-                  <li className="pr-5 pb-5">
-                    <Link href={face}>صورت</Link>
+                  <li className="pr-5 pb-5 text-2xl font-bold">
+                    <Link href={face}>بوتاکس</Link>
                   </li>
                   <li className="py-1 w-[80%] border border-[#fff0] hover:border-white">
-                    <Link href="/">صورت</Link>
+                    <Link href="/">فیلر پوستی</Link>
                   </li>
                   <li className="py-1 w-[80%] border border-[#fff0] hover:border-white">
-                    <Link href="/">بدن</Link>
-                  </li>{" "}
+                    <Link href="/">فیلر لب</Link>
+                  </li>
+                  <li className="py-1 w-[80%] border border-[#fff0] hover:border-white">
+                    <Link href="/">رینوپلاستی غیرجراحی</Link>
+                  </li>
+                  <li className="py-1 w-[80%] border border-[#fff0] hover:border-white">
+                    <Link href="/">لیفت صورت غیرجراحی</Link>
+                  </li>
+                  <li className="py-1 w-[80%] border border-[#fff0] hover:border-white">
+                    <Link href="/">بوسترهای پوستی</Link>
+                  </li>
+                  <li className="py-1 w-[80%] border border-[#fff0] hover:border-white">
+                    <Link href="/">لیپولیز</Link>
+                  </li>
+                  <li className="py-1 w-[80%] border border-[#fff0] hover:border-white">
+                    <Link href="/">میکروبلیدینگ ابرو</Link>
+                  </li>
                 </ul>
 
                 {/* colum 2 */}
                 <ul className="w-full">
-                  <li className="pr-5 pb-5">
+                  <li className="pr-5 pb-5 text-2xl font-bold">
                     <Link href={skin}>پوست</Link>
                   </li>
                   <li className="py-1 w-[80%] border border-[#fff0] hover:border-white">
-                    <Link href="/">صورت</Link>
+                    <Link href="/">فیشیال صورت</Link>
                   </li>
                   <li className="py-1 w-[80%] border border-[#fff0] hover:border-white">
-                    <Link href="/">بدن</Link>
+                    <Link href="/">لایه‌برداری شیمیایی</Link>
                   </li>
                   <li className="py-1 w-[80%] border border-[#fff0] hover:border-white">
-                    <Link href="/">مو</Link>
+                    <Link href="/">میکرونیدلینگ</Link>
+                  </li>{" "}
+                  <li className="py-1 w-[80%] border border-[#fff0] hover:border-white">
+                    <Link href="/">درمان با سلول‌های بنیادی</Link>
+                  </li>{" "}
+                  <li className="py-1 w-[80%] border border-[#fff0] hover:border-white">
+                    <Link href="/">درماپن</Link>
+                  </li>{" "}
+                  <li className="py-1 w-[80%] border border-[#fff0] hover:border-white">
+                    <Link href="/">پی‌آر‌پی</Link>
                   </li>
                 </ul>
 
                 {/* colum 3 */}
                 <ul className="w-full">
-                  <li className="pr-5 pb-5">
+                  <li className="pr-5 pb-5 text-2xl font-bold">
                     <Link href={body}>بدن</Link>
                   </li>
                   <li className="py-1 w-[80%] border border-[#fff0] hover:border-white">
-                    <Link href="/">صورت</Link>
+                    <Link href="/">لیزر موهای زائد</Link>
                   </li>
                   <li className="py-1 w-[80%] border border-[#fff0] hover:border-white">
-                    <Link href="/">بدن</Link>
+                    <Link href="/">الکترولیز موهای زائد</Link>
+                  </li>
+                  <li className="py-1 w-[80%] border border-[#fff0] hover:border-white">
+                    <Link href="/">لیپولیز تزریقی</Link>
+                  </li>{" "}
+                  <li className="py-1 w-[80%] border border-[#fff0] hover:border-white">
+                    <Link href="/">اسکلروتراپی</Link>
                   </li>{" "}
                 </ul>
 
                 {/* colum 4 */}
                 <ul className="w-full">
-                  <li className="pr-5 pb-5">
+                  <li className="pr-5 pb-5 text-2xl font-bold">
                     <Link href={hair}>مو</Link>
                   </li>
                   <li className="py-1 w-[80%] border border-[#fff0] hover:border-white">
-                    <Link href="#">صورت</Link>
+                    <Link href="#">پی‌آر‌پی مو</Link>
                   </li>
                   <li className="py-1 w-[80%] border border-[#fff0] hover:border-white">
-                    <Link href="#">بدن</Link>
-                  </li>{" "}
+                    <Link href="#">میکروپیگمنتیشن پوست سر</Link>
+                  </li>
+                  <li className="py-1 w-[80%] border border-[#fff0] hover:border-white">
+                    <Link href="#">درمان با سلول‌های بنیادی مو</Link>
+                  </li>
                 </ul>
               </div>
             </li>
